@@ -5,8 +5,8 @@ class Solution:
         Sum = 0
         for i in range(n):
             Sum += nums[i]
-            
-            maxx = max(maxx,  Sum)
+            if Sum > maxx:
+                maxx = Sum
             if Sum < 0:
                 Sum = 0
         return maxx
