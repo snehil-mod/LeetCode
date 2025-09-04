@@ -12,4 +12,8 @@ class Solution:
             elif s[i] not in hashmap:
                 hashmap[s[i]] = t[i]
         return True
+    
+    #one-liner solution:
+        return len(set(s)) == len(set(t)) == len(set(zip(s,t)))
+        #set counts distinct elements, len checks len of both strings, zip pairs the elements.
                     
