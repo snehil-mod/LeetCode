@@ -6,3 +6,4 @@ class Solution:
             if diff in hashtable:
                 return i, hashtable[diff]
             hashtable[nums[i]] = i
+            #python
