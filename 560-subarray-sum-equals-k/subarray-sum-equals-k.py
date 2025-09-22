@@ -5,7 +5,6 @@ class Solution:
             return 0
         freq_map = defaultdict(int)
         freq_map[0] = 1
-        n = len(nums)
         prefix_sum = 0
         count = 0
         for i in nums:
