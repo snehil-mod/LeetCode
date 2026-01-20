@@ -1,9 +1,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashtable = {}
+        if not nums:
+            return -1
+
+        i = j = 0
         for i in range(len(nums)):
-            diff = target - nums[i]
-            if diff in hashtable:
-                return i, hashtable[diff]
-            hashtable[nums[i]] = i
-            #python
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+        return -1
